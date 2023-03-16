@@ -179,3 +179,8 @@ document.querySelector("#submit").addEventListener("click",() => {
   }, 1500);
   window.scrollTo(0, 0);
 });
+
+// btn blog
+const otherpage = () => {
+  window.location.href="qustion.html"
+}
