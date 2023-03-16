@@ -111,10 +111,10 @@ document.querySelector("#submit").addEventListener("click",() => {
 
 
   // data setting on local storage and getting data from local storage
-  let storage = JSON.parse(localStorage.setItem("result"));
+  let storage = JSON.parse(localStorage.getItem("result"));
   if (storage) {
-    localStorage.getItem(
-      "results",
+    localStorage.setItem(
+      "result",
       JSON.stringify([
         ...storage,
         {
@@ -126,8 +126,9 @@ document.querySelector("#submit").addEventListener("click",() => {
     );
   } else {
     localStorage.setItem(
-      "results",
+      "result",
       JSON.stringify([
+     
         {
           marks: totalMark,
           examTime: timeTaken.innerText,
